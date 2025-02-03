@@ -8,6 +8,7 @@ WORKDIR ${GOPATH}/src/github.com/openshift/installer-aro-wrapper
 USER root
 RUN yum update -y
 COPY . ${GOPATH}/src/github.com/openshift/installer-aro-wrapper/
+COPY .bingo ${GOPATH}/src/github.com/openshift/installer-aro-wrapper/.bingo
 RUN git config --system --add safe.directory '*'
 RUN pwd
 RUN ls -lrta
